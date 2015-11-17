@@ -1,0 +1,140 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+	<title>Registration</title> 
+	<link rel="shortcut icon" href="man.gif" /> <!-- title image -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head> 
+<body id="body-color"> 
+	<div id="Sign-Up"> 
+		<fieldset style="width:98%" > <legend>DataBiz Employees Registration Form</legend> <!-- <! a box with line> -->
+			<table border="0">
+
+				<form method="POST" action="connectivity-sign-up.php" enctype = "multipart/form-data"> 
+					<tr> 
+						<td>Name</td>
+						<td> <input type="text" name="name"></td> 
+					</tr> 
+
+					<tr>
+						<td>Upload Picture</td>
+						<td><input type = "file" name = "file"></td>
+					</tr>
+
+					<tr> 
+						<td>Email</td>
+						<td>  <input type="email" name="email"></td>
+					</tr>
+
+					<tr> 
+						<td>Phone</td>
+						<td> <input type="text" name="phone"></td> 
+					</tr> 
+
+					<tr>
+						<td rowspan="3" >Skill </td>		<!-- <!Check box> -->  <!-- name="skill_test" -->
+						<td> <input type="checkbox" name="skill[]" value="MObile Programing" /> Mobile Programing</td>
+						<td> <input type="checkbox" name="skill[]" value="Web Programing" />Web Programing</td>
+					</tr>
+					<tr>
+						<td> <input type="checkbox" name="skill[]" value="Networking" /> Networking</td>
+						<td> <input type="checkbox" name="skill[]" value="Game Developer" /> Game Developer</td>
+					</tr>
+					<tr>
+						<td> <input type="checkbox" name="skill[]" value="Accounting" /> Accounting</td>
+						<td> <input type="checkbox" name="skill[]" value="Mangement" />Mangement</td>
+					</tr>
+					
+
+					<tr> 
+						<td>Post</td>
+						<td>
+							<select name="position">
+								<option selected value =""></option> <!-- <!dafult> -->
+								<option value="junior programmer">Junior Programmer</option>
+								<option value="programmer">Programmer</option>
+								<option value="senior programmer">Senior Programmer</option>
+								<option value="manger">Manger</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Sex</td>			<!-- <!radio button> -->
+						<td><input type="radio" name="sex" value="male" /> Male</td>
+						<td><input type="radio" name="sex" value="female" /> Female</td>
+					</tr>
+
+					<tr> 
+						<td> Birthday:</td>
+						<td><input type="date" name="bday"></td>
+					</tr>
+
+					<tr> 						<!-- <!radio button> -->
+						<td rowspan="3">Religion</td>
+						<td> <input type = "radio" name="religion" value="muslim" /> Muslim</td>
+						<td> <input type = "radio" name="religion" value="hindu" /> Hindu</td>
+					</tr>
+					<tr> 
+						<td> <input type = "radio" name="religion" value="christian" /> Christian</td>
+						<td> <input type = "radio" name="religion" value="buddha" /> Buddha</td>
+					</tr>
+					<tr> 
+						<td> <input type = "radio" name="religion" value="other" /> Other</td>
+					</tr>
+
+
+					
+
+					<tr><!-- <!problem> -->
+						<td rowspan="2"> Address</td>		
+					</tr>
+					<tr>
+						<td colspan="2"> <input type="text" style=width: "100%"; name="address"></td> 		
+					</tr>
+
+
+					<td colspan="3"><textarea style="width: 100%;" name="note" />Write a note about your self</textarea></td>
+
+					<tr> 
+						<td><input id = "button" type="reset" name="reset" id="reset" value="Reset" /></td>
+						<td></td>
+						<td><input id="button" type="submit" name="submit" value="Submit"></td>
+					</tr> 
+
+				</form> 
+			</table> 
+		</fieldset> 
+	</div> 
+
+	
+<!-- 	<?php
+	// if(isset($_POST['submit'])){
+	// 	/// connect to database
+	// 	mysql_connect("localhost", "root","") ;
+	// 	mysql_select_db("databaseimage");
+
+
+	// 	$imageName = mysql_real_escape_string($_FILES["image"]["name"]);
+	// 	$imageData = mysql_real_escape_string(file_get_contents($_FILES["image"]["tmp_name"]));
+	// 	$imageType = mysql_real_escape_string($_FILES["image"]["type"]);
+		
+
+	// 	if(substr($imageType,0,5) == "image"){
+
+	// 		echo "working code";
+	// 		mysql_query("INSERT INTO 'store' VALUES ('','$imageName','$imageData')");
+
+
+	// 	}else {
+	// 		echo "only image are allowed";
+
+		}
+		//echo "image uploaded .<p /> your image :<p /><img src=show.php.php?id=6>";
+	}
+	?> -->
+
+
+</body> 
+</html>
+
